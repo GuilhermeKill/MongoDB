@@ -10,7 +10,7 @@ class Controller_MovieType:
         self.relatorio = Relatorio()
 
    
-        def inserir_movie_type(self) -> MovieType:
+    def inserir_movie_type(self) -> MovieType:
             try:
                 self.mongo.connect()
 
