@@ -96,7 +96,7 @@ class Controller_Movie:
 
                 
                 
-                self.mongo.db["movies"].update_one({"movie_name": f"{new_name}"}, {"$set": {"movie_name": movie_name,"description": f"{description}", "movie_priece": priece}})
+                self.mongo.db["movies"].update_one({"movie_name": f"{movie_name}"}, {"$set": {"movie_name": f"{new_name}","description": f"{description}", "movie_priece": priece}})
                 df_movie = self.recupera_movie(movie_name)
 
                 print(df_movie.to_string())
